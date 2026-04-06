@@ -1,0 +1,102 @@
+/* General page styles */
+body {
+    font-family: Georgia, serif;
+    background-color: #f0f7fd;
+    color: #1a3a52;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and nav */
+header {
+    background-color: #c9e3f5;
+    padding: 14px 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #185fa5;
+    margin-right: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+nav a.active {
+    color: #0d3b66;
+    font-weight: bold;
+    border-bottom: 2px solid #185fa5;
+    padding-bottom: 2px;
+}
+
+nav a:visited {
+    color: #185fa5;
+}
+
+/* Headings */
+h1 {
+    font-size: 32px;
+    color: #0d3b66;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #185fa5;
+    font-weight: normal;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 48px 20px 24px;
+}
+
+/* Circular profile photo */
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #85b7eb;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Content/paragraph section */
+.content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.8;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #2c5f82;
+}
+
+/* Cormorant Garamond font class */
+.cormorant-garamond {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+}
+
+/* Image border */
+.bordered {
+    border: 3px solid #85b7eb;
+}
+
+.content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.8;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #2c5f82;
+    text-align: center;
+}
+
+header {
+    background-color: #c9e3f5;
+    padding: 14px 40px;
+    text-align: center;
+}
