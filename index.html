@@ -1,4 +1,3 @@
-
 <html>
 
     <head>
@@ -10,47 +9,265 @@
         <link rel="stylesheet" href="style.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+        <style>
+            /* ── Typography ── */
+            body {
+                font-family: 'Lato', sans-serif;
+                font-weight: 300;
+                background-color: #f0f7fd;
+                color: #1a3a52;
+            }
+
+            h1, h2, h3, .display-font {
+                font-family: 'Cormorant Garamond', serif;
+            }
+
+            p {
+                font-family: 'Lato', sans-serif;
+                font-size: 1.05rem;
+                line-height: 1.75;
+                color: #2c5f82;
+            }
+
+            /* ── Bootstrap Navbar ── */
+            .navbar {
+                background-color: #c9e3f5;
+            }
+
+            .navbar-brand {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 1.5rem;
+                color: #0d3b66 !important;
+                letter-spacing: 0.05em;
+            }
+
+            .navbar-nav .nav-link {
+                font-family: 'Lato', sans-serif;
+                font-weight: 400;
+                color: #185fa5 !important;
+                letter-spacing: 0.08em;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                padding: 0.5rem 1rem;
+                transition: color 0.2s;
+            }
+
+            .navbar-nav .nav-link:hover,
+            .navbar-nav .nav-link.active {
+                color: #0d3b66 !important;
+                font-weight: bold;
+                border-bottom: 2px solid #185fa5;
+            }
+
+            .navbar-toggler {
+                border-color: #185fa5;
+            }
+
+            /* ── Hero Section ── */
+            .hero {
+                background-color: #f0f7fd;
+                padding: 4rem 0 3rem;
+                text-align: center;
+            }
+
+            .profile-photo {
+                width: 160px;
+                height: 160px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 3px solid #85b7eb;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+                font-weight: 600;
+                color: #0d3b66;
+                margin-bottom: 0.25rem;
+            }
+
+            .hero h2 {
+                font-size: 1.6rem;
+                font-weight: 300;
+                color: #185fa5;
+                font-style: italic;
+            }
+
+            /* ── Content Sections ── */
+            .section-label {
+                font-family: 'Lato', sans-serif;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 0.15em;
+                color: #185fa5;
+                margin-bottom: 0.5rem;
+            }
+
+            .content-card {
+                background: #fff;
+                border: 1px solid #85b7eb;
+                border-radius: 4px;
+                padding: 2rem;
+                height: 100%;
+            }
+
+            .content-card h3 {
+                font-size: 1.8rem;
+                color: #0d3b66;
+                margin-bottom: 0.75rem;
+            }
+
+            .data-viz-placeholder {
+                background: #1a3a52;
+                border-radius: 4px;
+                height: 180px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #c9e3f5;
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 1.2rem;
+                font-style: italic;
+            }
+
+            .main-content {
+                background-color: #f0f7fd;
+                padding: 3rem 0;
+            }
+
+            footer {
+                background-color: #0d3b66;
+                color: #c9e3f5;
+                padding: 1.5rem 0;
+                text-align: center;
+                font-family: 'Lato', sans-serif;
+                font-size: 0.85rem;
+                letter-spacing: 0.05em;
+            }
+        </style>
 
     </head>
 
     <body>
 
+        <!-- ── Bootstrap Navbar ── -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Nyah Mathis</a>
 
-    <header>
+                <!-- Hamburger Toggle Thingy -->
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNav"
+                    aria-controls="mainNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="filter: invert(30%) sepia(50%) saturate(400%) hue-rotate(190deg);"></span>
+                </button>
 
-        <nav>
-            <a href="index.html" class="active">Home</a>
-             
-            | <a href="about/index.html">About Me</a> 
-            | 
-            <a href="work/index.html">My Work</a> 
-            | 
-            <a href="resume/index.html">Resume</a> |
-            <a href="final/index.html">Final</a> 
-
-
-
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about/index.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="work/index.html">My Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resume/index.html">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="final/index.html">Final</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
-    </header>
-
+        <!-- ── Hero Section ── -->
         <div class="hero">
+            <img src="nyahmathis.jpeg" alt="A photo of Nyah Mathis smiling" class="profile-photo">
+            <h1>Hi, I'm Nyah!</h1>
+            <h2 class="cormorant-garamond">Sophomore student at Syracuse University</h2>
+        </div>
 
-    <img src="nyahmathis.jpeg" alt="A photo of Nyah Mathis smiling" class="profile-photo">
+        <!-- ── Main Content: Bootstrap Grid ── -->
+        <section class="main-content">
+            <div class="container">
 
-    <h1>Hi, I'm Nyah!</h1>
+                <!-- Row 1 -->
+                <div class="row g-4 mb-4">
 
-    <h2 class="cormorant-garamond">Sophomore student at Syracuse University</h2>
+                    <div class="col-12 col-md-7" style="padding-left: 2rem; padding-right: 1rem;">
+                        <div class="content-card">
+                            <p class="section-label">Welcome</p>
+                            <h3>A Little Bit About This Portfolio...</h3>
+                            <p>
+                                Welcome to the portfolio of Nyah Mathis. 
+                                Here you'll find her work and projects from her time at Syracuse University. 
+                            </p>
+                        </div>
+                    </div>
 
-</div>
+                    <div class="col-12 col-md-5" style="padding-left: 1rem; padding-right: 2rem;">
+                        <div class="content-card">
+                            <p class="section-label"></p>
+                            <img src="sulandscapeimg.jpeg" alt="SU campus landscape" style="width: 100%; border-radius: 4px;">
+                        </div>
+                    </div>
 
-<div class="content">
-        <p>
-            Welcome to the portfolio of Nyah Mathis. 
-        </p>
-</div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="row g-4">
+
+                    <div class="col-12 col-md-5" style="padding-left: 2rem; padding-right: 1rem;">
+                        <div class="content-card">
+                            <p class="section-label">Data</p>
+                            <h3>Data Visualization</h3>
+                            <div class="data-viz-placeholder">
+                                Data visualization coming soon...
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-7" style="padding-left: 1rem; padding-right: 2rem;">
+                        <div class="content-card">
+                            <p class="section-label">Story</p>
+                            <h3>Latest Work</h3>
+                            <p>
+                                Work and projects coming soon...
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── Footer ── -->
+        <footer>
+            <div class="container">
+                &copy; 2025 Nyah Mathis &mdash; Syracuse University
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
+
+    </body>
+
+</html>
 
 
         
